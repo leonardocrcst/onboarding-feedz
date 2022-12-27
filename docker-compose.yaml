@@ -1,0 +1,27 @@
+services:  
+  backend:
+    user: 1000:1000
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - $PWD/backend:/var/www/html:rw
+    links:
+      - database
+    ports:
+      - 8081:8000
+    command: php -S 0.0.0.0:8000 -t public
+
+  database:
+    container_name: database
+    image: mariadb
+    volumes:
+      - $PWD/database:/var/lib/mysql:rw
+    ports: 
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: 0nb04rd1ng
+      MARIADB_USER: onboarding
+      MARIADB_PASSWORD: 0nb04rd1ng

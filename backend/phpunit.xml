@@ -1,0 +1,24 @@
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/Cases</directory>
+        </testsuite>
+    </testsuites>
+    <coverage cacheDirectory="public/coverage"
+              includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              pathCoverage="false"
+    >
+        <include>
+            <directory suffix=".php">src/Controllers</directory>
+            <directory suffix=".php">src/Models</directory>
+        </include>
+        <report>
+            <clover outputFile="public/coverage/clover.xml"/>
+            <html outputDirectory="public/coverage"/>
+        </report>
+    </coverage>
+    <logging>
+        <log type="testdox-text" target="tests/Cases/log.txt"/>
+    </logging>
+</phpunit>

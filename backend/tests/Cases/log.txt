@@ -1,0 +1,13 @@
+Models (Tests\Cases\Models)
+ [x] Empty table users
+ [x] Empty table posts
+ [x] Insert invalid user
+ [x] Insert valid user
+ [x] Not empty table user
+ [x] Inser and update table user
+ [x] Remove user
+ [x] Insert invalid blog post
+ [x] Insert valid blog post
+ [x] Update invalid blog post
+ [x] Update valid blog post
+

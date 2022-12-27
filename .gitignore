@@ -1,0 +1,6 @@
+/backend/logs
+/public/coverage
+/tests/Cases/log.txt
+.idea
+.vscode
+.phpunit.result.cache
